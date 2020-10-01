@@ -52,14 +52,14 @@ class App extends Component {
       return { hideBlog: !prevState.hideBlog }
     });
     // alert("button is clicked")
-  }
+  }   
   render() {
     console.log("Render Called")
     const blogCards = isArrayEmpty(this.state.mObj) ? [] : this.state.mObj.map((item, pos) => {
       return (
         <BlockCard key={item.id} title={item.blogName} description={item.description} LikeCount={item.LikeCount} LikeCountUpdate={() => this.LikeCountUpdate(pos)} />
         // <div className="blogCard" key={item.id}>
-        //   <h3>{item.blogName}</h3>
+        //   <h3>{item.blogName}</h3>   
         //   <p>{item.description}
         //   </p>
         // </div>
@@ -77,7 +77,7 @@ class App extends Component {
           Lorem Ipsum Dolar
           Lorem Ipsum Dolar Lorem Ipsum Dolar
           </p>
-        </div> */}
+        </div> */}  
         <div className="App">
           {
             this.state.hideBlog ? blogCards : null
